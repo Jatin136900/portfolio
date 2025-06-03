@@ -1,0 +1,125 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #2d0b4e, #010417);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: slideFadeIn 1.5s ease-in-out forwards;
+    }
+
+    .icons i {
+      font-size: 1.8rem;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 18px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      color: #ffffff;
+    }
+
+    .icons i:hover {
+      transform: scale(1.3) rotate(5deg);
+      background: rgba(138, 43, 226, 0.6);
+      color: #fff;
+      box-shadow: 0 0 20px #8a2be2, 0 0 30px #6a0dad;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      line-height: 1.3;
+      animation: textSlideUp 2s ease-in-out;
+    }
+
+    .highlight {
+      color: #b19cd9;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(177, 156, 217, 0.8);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #bbbbbb;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .icons i {
+        font-size: 1.4rem;
+        padding: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .icons {
+        gap: 15px;
+      }
+
+      .footer {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes textSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
