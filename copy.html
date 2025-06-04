@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -60,5 +60,277 @@
   <footer>
     <p>© 2025 Verma ji. All Rights Reserved.</p>
   </footer>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Developer Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top left, #2d0b4e, #010417);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .nav {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    .nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width 0.3s;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 50px;
+      text-align: center;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+      max-width: 600px;
+      animation: fadeInLeft 1.5s ease-out;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      background: linear-gradient(90deg, #ffffff, #8a2be2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGlow 2s infinite alternate;
+    }
+
+    .hero-img {
+      flex: 1 1 300px;
+      max-width: 500px;
+      animation: fadeInRight 1.5s ease-out;
+    }
+
+    .floating-img {
+      width: 100%;
+      animation: floatY 4s ease-in-out infinite;
+    }
+
+    .about {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .highlight {
+      color: #b19cd9;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(177, 156, 217, 0.8);
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 20px;
+      width: 100%;
+    }
+
+    .left, .right {
+      flex: 1 1 300px;
+      max-width: 500px;
+      padding-left: 8%;
+    }
+
+    .left h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .left h2 span {
+      color: #9a66ff;
+    }
+
+    .left p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btns a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btns .download {
+      background: #9a66ff;
+      color: white;
+    }
+
+    .btns .view {
+      border: 1px solid #9a66ff;
+      color: #9a66ff;
+    }
+
+    .btns .download:hover {
+      background: #7e4cff;
+    }
+
+    .btns .view:hover {
+      background: #9a66ff;
+      color: white;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: url('images/name.jpg') no-repeat center;
+      background-size: cover;
+      box-shadow: 0 0 25px rgba(154, 102, 255, 0.6);
+      border: 3px solid rgba(255,255,255,0.1);
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes textGlow {
+      0% { text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2; }
+      100% { text-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.2em;
+      }
+
+      .nav {
+        font-size: 14px;
+        right: 20px;
+        gap: 15px;
+      }
+
+      .left h2 {
+        text-align: center;
+      }
+
+      .left p {
+        text-align: center;
+      }
+
+      .btns {
+        justify-content: center;
+      }
+
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Frontend Developer & UI/UX Designer</h1>
+    </div>
+    <div class="hero-img">
+      <img src="images/port-removebg-preview.png" alt="Dev Illustration" class="floating-img" />
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="iron">
+      <span class="highlight">About Me</span>
+    </div>
+    <p class="subtitle">✦ Transforming vision into digital experiences ✦</p>
+
+    <div class="about-content">
+      <div class="left">
+        <h2>Hello, I'm <br><span>Jatin Verma</span></h2>
+        <p>I’m a passionate Frontend Developer and UI/UX Designer dedicated to crafting clean, user-friendly digital experiences. With a keen eye for design and a solid foundation in HTML, CSS, JavaScript, and modern frameworks, I bring ideas to life through intuitive interfaces and responsive web solutions.</p>
+        <div class="btns">
+          <a href="#" class="download">Download CV</a>
+          <a href="#" class="view">View Projects</a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="profile-pic"></div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

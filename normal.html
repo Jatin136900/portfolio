@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .about-section {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .about-title {
+      color: #b19cd9;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .left {
+      flex: 1;
+      text-align: left;
+    }
+
+    .left h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .left h2 span {
+      color: #9a66ff;
+    }
+
+    .left p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .btns {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btns a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btns .download {
+      background: #9a66ff;
+      color: white;
+    }
+
+    .btns .view {
+      border: 1px solid #9a66ff;
+      color: #9a66ff;
+    }
+
+    .btns .download:hover {
+      background: #7e4cff;
+    }
+
+    .btns .view:hover {
+      background: #9a66ff;
+      color: white;
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: url('https://via.placeholder.com/180') no-repeat center;
+      background-size: cover;
+      box-shadow: 0 0 25px rgba(154,102,255,0.6);
+      border: 3px solid rgba(255,255,255,0.1);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      text-align: center;
+      width: 150px;
+      box-shadow: 0 0 15px rgba(154,102,255,0.15);
+    }
+
+    .stat-box h3 {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .stat-box p {
+      font-size: 0.85rem;
+      color: #bbb;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left, .right {
+        text-align: center;
+      }
+
+      .btns {
+        justify-content: center;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="about-section">
+    <h2 class="about-title">About Me</h2>
+    <p class="subtitle">✦ Transforming vision into digital experiences ✦</p>
+
+    <div class="about-content">
+      <div class="left">
+        <h2>Hello, I'm <br><span>Eki Zulfar Rachman</span></h2>
+        <p>Seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang tertarik dalam pengembangan Front-end. Saya berfokus pada menciptakan pengalaman digital yang menarik dan selalu berusaha memberikan sesuatu yang berbeda dalam setiap proyek.</p>
+        <div class="btns">
+          <a href="#" class="download"><i class="fas fa-download"></i> Download CV</a>
+          <a href="#" class="view">👀 View Projects</a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="profile-pic"></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3>11</h3>
+        <p>Total Projects</p>
+      </div>
+      <div class="stat-box">
+        <h3>7</h3>
+        <p>Certificates</p>
+      </div>
+      <div class="stat-box">
+        <h3>3</h3>
+        <p>Years of Experience</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
