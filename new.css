@@ -39,8 +39,8 @@
       margin-top: 30px;
   }
 
-  
-  .buttons button { 
+
+  .buttons button {
       background-color: #441ca6;
       border: none;
       color: white;
@@ -73,7 +73,7 @@
   .name {
       position: relative;
       top: -25px;
-      left: 50px;
+      left: 96px;
       font-weight: bold;
       animation: fadeInDown 1s ease-out;
   }
@@ -94,7 +94,7 @@
   .nav {
       position: absolute;
       top: 39px;
-      right: 50px;
+      right: 176px;
       display: flex;
       gap: 30px;
       font-weight: bold;
@@ -536,3 +536,77 @@
           transform: translateY(0);
       }
   }
+
+
+
+
+  .cards {
+      display: none;
+  }
+
+  .cards:first-of-type {
+      display: block;
+  }
+
+  .load-more {
+      margin: 20px auto;
+      display: block;
+      padding: 12px 25px;
+      background-color: #441ca6;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 0px #7b4eff00;
+  }
+
+  .load-more:hover,
+  .load-more:focus {
+      background-color: #6639ba;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #7b4eff;
+  }
+
+
+ .tech-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1.3s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tech-icons img {
+      width: 60px;
+      height: 60px;
+      filter: drop-shadow(0 0 10px #a362ea);
+      transition: transform 0.4s ease, filter 0.4s ease;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .tech-icons img:hover {
+      transform: scale(1.2) rotate(5deg);
+      filter: drop-shadow(0 0 25px #ffffff);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
