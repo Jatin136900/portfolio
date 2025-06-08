@@ -279,7 +279,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 30px;
+      /* gap: 30px; */
       padding: 70px;
       width: 100%;
   }
@@ -353,6 +353,25 @@
       background-size: cover;
       box-shadow: 0 0 25px rgba(154, 102, 255, 0.6);
       border: 3px solid rgba(255, 255, 255, 0.1);
+      animation: glowPulse 3s ease-in-out infinite;
+
+
+  }
+
+  @keyframes glowPulse {
+
+      0%,
+      100% {
+          box-shadow: 0 0 20px rgba(154, 102, 255, 0.3),
+              0 0 40px rgba(154, 102, 255, 0.2);
+          transform: scale(1);
+      }
+
+      50% {
+          box-shadow: 0 0 30px rgba(154, 102, 255, 0.6),
+              0 0 60px rgba(154, 102, 255, 0.4);
+          transform: scale(1.03);
+      }
   }
 
 
@@ -499,6 +518,13 @@
       font-size: 0.9rem;
   }
 
+  .live-demo:hover {
+      font-size: 1rem;
+      font-weight: 900;
+  }
+
+
+
   .details-btn {
       background-color: #222;
       color: white;
@@ -570,7 +596,7 @@
   }
 
 
- .tech-icons {
+  .tech-icons {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 2rem;
@@ -578,35 +604,281 @@
       max-width: 1000px;
       margin: auto;
       animation: fadeInUp 1.3s ease forwards;
-    }
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(30px);
+      }
 
-    .tech-icons img {
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .tech-icons img {
       width: 60px;
       height: 60px;
       filter: drop-shadow(0 0 10px #a362ea);
       transition: transform 0.4s ease, filter 0.4s ease;
       animation: float 3s ease-in-out infinite;
-    }
+      padding-bottom: 50px;
+  }
 
-    .tech-icons img:hover {
+  .tech-icons img:hover {
       transform: scale(1.2) rotate(5deg);
       filter: drop-shadow(0 0 25px #ffffff);
-    }
+  }
 
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0px); }
-    }
-
-    @media screen and (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
+  @keyframes float {
+      0% {
+          transform: translateY(0px);
       }
 
+      50% {
+          transform: translateY(-8px);
+      }
+
+      100% {
+          transform: translateY(0px);
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+      nav ul {
+          flex-direction: column;
+          align-items: center;
+      }
+  }
+
+
+  .glass-box {
+      padding: 0px 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInScale 1.2s ease forwards;
+      margin: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+  }
+
+  .glass-box:hover {
+      background-color: #6639ba;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #7b4eff;
+      font-weight: 900;
+
+  }
+
+  @keyframes fadeInScale {
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
+
+  .icons {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+
+
+
+  .formone {
+      width: 100%;
+      height: 70vh;
+  }
+
+  .form {
+      width: 100%;
+      margin-top: 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+
+
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      background: rgba(30, 41, 59, 0.9);
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+      gap: 40px;
+      max-width: 1100px;
+      width: 100%;
+      animation: fadeSlide 1.2s ease forwards;
+  }
+
+  .contact-info,
+  #contactForm {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .contact-info div {
+      background: #334155;
+      padding: 7px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: all 0.3s ease;
+      transform: scale(0.98);
+      animation: popUp 1s ease-in-out both;
+  }
+
+  .contact-info div:hover {
+      transform: scale(1.03);
+      background-color: #475569;
+  }
+
+  .contact-info div i {
+      font-size: 26px;
+      color: #8b5cf6;
+      padding-left: 25px;
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      outline: none;
+      background: #475569;
+      color: white;
+      resize: none;
+      transition: 0.3s;
+      font-size: 16px;
+  }
+
+  #contactForm input:focus,
+  #contactForm textarea:focus {
+      box-shadow: 0 0 10px #8b5cf6;
+      background-color: #334155;
+  }
+
+  #contactForm button {
+      padding: 16px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+  }
+
+  #contactForm button:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px #8b5cf6;
+  }
+
+  /* @keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+
+
+
+
+
+
+  @keyframes fadeSlide {
+      0% {
+          opacity: 0;
+          transform: translate3d(0, 60px, -30px) scale(0.95) rotateX(5deg);
+          filter: blur(12px);
+      }
+
+      40% {
+          opacity: 0.4;
+          transform: translate3d(0, -10px, 10px) scale(1.03);
+          filter: blur(4px);
+      }
+
+      70% {
+          transform: translate3d(0, 5px, 0px) scale(0.98);
+          filter: blur(1px);
+      }
+
+      100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0) scale(1) rotateX(0deg);
+          filter: blur(0);
+      }
+  }
+
+  @keyframes popUp {
+      0% {
+          opacity: 0;
+          transform: perspective(600px) rotateX(45deg) scale(0.5);
+          filter: blur(10px);
+      }
+
+      50% {
+          transform: perspective(600px) rotateX(-10deg) scale(1.1);
+          opacity: 0.8;
+          filter: blur(3px);
+      }
+
+      100% {
+          transform: perspective(600px) rotateX(0deg) scale(1);
+          opacity: 1;
+          filter: blur(0);
+      }
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+      .container {
+          flex-direction: column;
+          gap: 30px;
+      }
+  }
+
+
+
+  
