@@ -881,4 +881,61 @@
 
 
 
-  
+  /* Footer Base */
+.footer {
+  /* background: #0f172a; */
+  text-align: center;
+  /* padding: 40px 20px 20px; */
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 2rem;
+}
+.social-icons a{
+    text-decoration: none;
+}
+
+/* Each Icon Style */
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: 0.4s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+}
+
+/* Hover Effect with Animation */
+.icon:hover {
+  transform: scale(1.15) rotate(10deg);
+  background: #1e293b;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Optional: Specific Icon Colors */
+
+.icon.behance:hover {color: #1769ff;}
+.icon.instagram:hover { color: #E1306C; }
+.icon.figma:hover { color: #a259ff;}
+.icon.dribbble:hover {color: #ea4c89;}
+
+
+/* Copyright */
+.footer p {
+  font-size: 14px;
+  color: #aaa;
+  margin: 3rem 0;
+}
