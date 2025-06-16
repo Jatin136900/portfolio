@@ -7,8 +7,7 @@
   <title>Frontend Developer Portfolio</title>
   <link rel="stylesheet" href="indexsecond.css">
   <link rel="website icon" type="png" href="images/new p.webp">
-
-
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="media.css">
 
@@ -17,11 +16,19 @@
 <body>
 
   <!-- header -->
-  <section class="vedio">
-    <!-- <video autoplay muted loop id="bg-video">
-      <source src="technology-network-background-free-video.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video> -->
+
+ 
+   <div class="particles" id="particles"></div>
+
+    <!-- Video Background Section -->
+    <section class="video-background">
+        <!-- Background Video -->
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/vimeo/404094423/network-40409.mp4?download" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+        </video>
+        <div class="video-overlay"></div>
+   
 
     <section class="ironman">
       <div class="name">
@@ -51,7 +58,7 @@
         <img src="images/port-removebg-preview.png" alt="Dev Illustration" class="floating-img" />
       </div>
     </section>
-  </section>
+     </section>
 
 
   <!-- about me  -->
@@ -59,11 +66,11 @@
   <section id="aboutme">
 
     <div class="iron">
-      <span class="highlight">About Me</span>
+      <span data-aos="fade-down" data-aos-duration="2000" class="highlight">About Me</span>
     </div>
 
     <div class="about-content">
-      <div class="left">
+      <div  data-aos="fade-right" data-aos-duration="2000" class="left">
         <h2>Hello, I'm <br><span>Jatin Verma</span></h2>
         <p>I’m a passionate Frontend Developer and UI/UX Designer dedicated to crafting clean, user-friendly digital
           experiences. With a keen eye for design and a solid foundation in HTML, CSS, JavaScript, and modern
@@ -83,7 +90,7 @@
 
 
       </div>
-      <div class="right">
+      <div   data-aos="fade-left" data-aos-duration="2000" class="right">
         <div class="profile-pic"></div>
       </div>
     </div>
@@ -95,7 +102,7 @@
 
   <section id="cardsparents">
     <div class="iron">
-      <span class="highlight">Portfolio Showcase</span>
+      <span   data-aos="fade-down" data-aos-duration="2000" class="highlight">Portfolio Showcase</span>
     </div>
     <div class="para">
       <!-- <p>✦ Explore my journey through projects, certifications, and technical expertise. ✦</p> -->
@@ -106,7 +113,7 @@
       <div class="tab-buttons">
         <div class="icons">
           <div class="glass-box">
-            <h3>Projects</h3>
+            <h3   data-aos="zoom-in" data-aos-duration="2000" >Projects</h3>
           </div>
         </div>
         <!-- <div class="tab-content" id="tech">
@@ -121,7 +128,7 @@
       <section class="cards">
         <div class="hulk">
           <!-- Project 1 -->
-          <div class="tab-content active">
+          <div    data-aos="fade-right" data-aos-duration="2000"  class="tab-content active">
             <div class="project-card">
               <div class="img">
                 <img src="images/full stack.png" alt="Project Image" />
@@ -137,7 +144,7 @@
             </div>
           </div>
           <!-- Project 2 -->
-          <div class="tab-content active">
+          <div  data-aos="fade-up" data-aos-duration="3000"   class="tab-content active">
             <div class="project-card">
               <div class="img">
                 <img src="images/Screenshot 2025-06-04 180610.png" alt="Project Image" />
@@ -155,7 +162,7 @@
             </div>
           </div>
           <!-- Project 3 -->
-          <div class="tab-content active">
+          <div   data-aos="fade-left" data-aos-duration="2000" class="tab-content active">
             <div class="project-card">
               <div class="img">
                 <img src="images/tanishq.png" alt="Project Image" />
@@ -578,7 +585,9 @@
                   </div>
                   <div class="card-info">
                     <h3>Color Code Changer </h3>
-                    <p>This Color Code Changer website is built using HTML, CSS, and JavaScript to allow users to dynamically change and view color codes in real-time. With a clean and interactive UI, users can click buttons or use input fields.</p>
+                    <p>This Color Code Changer website is built using HTML, CSS, and JavaScript to allow users to
+                      dynamically change and view color codes in real-time. With a clean and interactive UI, users can
+                      click buttons or use input fields.</p>
                     <div class="card-footer">
                       <a href="https://color-code-changer.vercel.app/" class="live-demo">Live Demo ↗</a>
 
@@ -596,7 +605,9 @@
                   </div>
                   <div class="card-info">
                     <h3> IPL Stats Dashboard </h3>
-                    <p>This IPL Stats Dashboard is designed using HTML, CSS, and JavaScript to showcase key player performance data from the 2025 season. Users can filter stats by categories such as Orange Cap, Most Fours, Sixes, Centuries, and Fifties.</p>
+                    <p>This IPL Stats Dashboard is designed using HTML, CSS, and JavaScript to showcase key player
+                      performance data from the 2025 season. Users can filter stats by categories such as Orange Cap,
+                      Most Fours, Sixes, Centuries, and Fifties.</p>
                     <div class="card-footer">
                       <a href="https://ipl-lac.vercel.app/" class="live-demo">Live Demo ↗</a>
 
@@ -607,7 +618,7 @@
 
               <!-- 3 -->
 
-              
+
             </div>
 
           </section>
@@ -628,7 +639,7 @@
   <section class="tech">
     <div class="icons">
       <div class="glass-box">
-        <h3> My Tech Stack</h3>
+        <h3   data-aos="zoom-in" data-aos-duration="2000" > My Tech Stack</h3>
       </div>
     </div>
 
@@ -656,12 +667,12 @@
   <section id="formparents">
 
     <div class="iron">
-      <span class="highlight">Contact Me</span>
+      <span   data-aos="fade-down" data-aos-duration="2000"   class="highlight">Contact Me</span>
     </div>
     <!-- <p class="subtitle">✦ Let’s connect and build something amazing together — reach out to collaborate, hire, or just
       say hello! ✦</p> -->
 
-    <div class="formone">
+    <div  data-aos="fade-up" data-aos-duration="2000" class="formone">
       <section class="form">
 
 
@@ -737,7 +748,10 @@
 
 
 
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="script.js"></script>
 </body>
 
