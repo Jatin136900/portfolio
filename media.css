@@ -1,9 +1,12 @@
- /* third */
-
+ 
 
 
 
  @media screen and (min-width: 320px) and (max-width: 570px) {
+
+    .cardsparents{
+        overflow: hidden;
+    }
      .ironman {
          flex-direction: column;
          align-items: center;
