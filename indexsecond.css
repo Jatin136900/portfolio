@@ -894,21 +894,6 @@ color: white;
   z-index: -1;
 }
 
-/* All content inside .vedio appears above the video */
-.vedio .ironman,
-.vedio .hero {
-  position: relative;
-  z-index: 1;
-  color: white;
-}
-
-.nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 .video-background {
     position: relative;
     width: 100%;
