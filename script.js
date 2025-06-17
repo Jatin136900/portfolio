@@ -110,3 +110,13 @@ style.textContent = `
             }
         `;
 document.head.appendChild(style);
+
+
+
+ const toggle = document.getElementById('toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });

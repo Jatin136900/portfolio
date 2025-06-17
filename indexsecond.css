@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 30px 100px;
+    align-items: center;
 }
 
 .name h1 {
@@ -26,7 +27,7 @@ body {
 
 }
 
-.nav {
+/* .nav {
     margin-top: 20px;
     gap: 30px;
     font-weight: bold;
@@ -59,7 +60,84 @@ body {
 
 .nav a:hover::after {
     width: 100%;
+} */
+
+
+
+/* Main nav container */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-out;
+    position: relative;
+    z-index: 999;
 }
+
+/* Toggle Hamburger Icon */
+.toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.4s ease;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.4s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #00f;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 
@@ -279,11 +357,12 @@ body {
     box-shadow: 0 0 25px rgba(154, 102, 255, 0.6);
     border: 3px solid rgba(255, 255, 255, 0.1);
     animation: glowPulse 3s ease-in-out infinite;
-    transition: 0.3s ease ;
+    transition: 0.3s ease;
 
 
 }
-.profile-pic:hover{
+
+.profile-pic:hover {
     width: 250px;
     height: 250px;
     object-fit: cover;
@@ -835,6 +914,8 @@ body {
     background: #1e293b;
     color: #fff;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+
+
 }
 
 /* Optional: Specific Icon Colors */
@@ -854,12 +935,15 @@ body {
 .icon.dribbble:hover {
     color: #ea4c89;
 }
+
 .icon.github:hover {
-    color: #333; /* GitHub brand color */
+    color: #333;
+    /* GitHub brand color */
 }
 
 .icon.linkedin:hover {
-    color: #0A66C2; /* LinkedIn brand color */
+    color: #0A66C2;
+    /* LinkedIn brand color */
 }
 
 
@@ -872,9 +956,9 @@ body {
     margin: 3rem 0;
 }
 
-.email a{
-text-decoration: none;
-color: white;
+.email a {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -948,4 +1032,3 @@ color: white;
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
 }
-
