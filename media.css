@@ -213,11 +213,11 @@
 
      .toggle {
          display: flex;
-         margin-left: auto;
+         /* margin-left: auto; */
      }
      .nav-links {
          flex-direction: column;
-         width: 55vh;
+         width: 58vh;
          background: #2d0b4e;
          align-items: center;
          text-align: center;
