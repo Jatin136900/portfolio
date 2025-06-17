@@ -205,14 +205,16 @@
 
      .nav {
          flex-direction: column;
-         align-items: flex-start;
+         align-items: center;
+         display: flex;
+         justify-content: center;
+         text-align: center;
      }
 
      .toggle {
          display: flex;
          margin-left: auto;
      }
-
      .nav-links {
          flex-direction: column;
          width: 55vh;
