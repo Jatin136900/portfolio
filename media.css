@@ -209,6 +209,7 @@
          display: flex;
          justify-content: center;
          text-align: center;
+         /* width: 100%; */
      }
 
      .toggle {
@@ -217,13 +218,13 @@
      }
      .nav-links {
          flex-direction: column;
-         width: 58vh;
+         width: 100%;
          background: #2d0b4e;
          align-items: center;
          text-align: center;
          position: absolute;
          top: 60px;
-         right: -38px;
+         right: 0;
          display: none;
          padding: 20px 0;
          box-shadow: 0 0 10px rgba(0, 0, 0, 0.422);
