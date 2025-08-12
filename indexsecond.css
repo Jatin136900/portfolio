@@ -659,7 +659,7 @@ body {
     height: 80px;
     filter: drop-shadow(0 0 10px #a362ea);
     transition: transform 0.4s ease, filter 0.4s ease;
-    animation: float 3s ease-in-out infinite;
+    animation: float 2.5s ease-in-out infinite;
     padding-bottom: 20px;
     object-fit: cover;
 }
@@ -675,7 +675,7 @@ body {
     }
 
     50% {
-        transform: translateY(-8px);
+        transform: translateY(-12px);
     }
 
     100% {
